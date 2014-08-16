@@ -1,0 +1,10 @@
+#itemCanvasBody.parcc {font-size:16px;line-height:24px;}
+#itemCanvasBody.parcc label {font-size:16px;line-height:24px;}
+#itemCanvasBody.parcc input[type="text"] {font-size:16px;line-height:24px;height:24px;margin-bottom:0;margin-top:0;}
+#itemCanvasBody.parcc .int-choice-control {padding: 5px 0 0;}
+#itemCanvasBody.parcc .int-choice-control input[type="checkbox"] {margin-top:2px;}
+#itemCanvasBody.parcc .passage-title {}
+#itemCanvasBody.parcc .author {font-weight:normal;text-align:center;font-style:normal;}
+#itemCanvasBody.parcc .directions-passage {font-weight:normal;text-align:left;}
+#itemCanvasBody.parcc .boxText {border:1px solid #000000;}
+#itemCanvasBody.parcc blockquote.parcc p {margin-bottom:0;font-size:16px;font-weight:normal;line-height:24px;}

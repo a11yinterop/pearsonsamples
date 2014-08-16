@@ -1,0 +1,138 @@
+
+/*	--------------------------------------------------
+	Colors
+	-------------------------------------------------- */
+
+	.grayDark { color: #333;} 
+	.grayDarkBackground { background-color: #333; }
+	.grayLight { color: #999; } 
+	.grayLightBackground { background-color: #999; }
+	.grayLighter { color: #eee; } 
+	.grayLighterBackground { background-color: #eee; }
+	.primaryColor { color: #0074CC; }
+	.primaryColorBackground { background-color: #0074CC; }
+	.primaryColorAccent,  { color: #049CDB; }
+	.primaryColorAccentBackground { background-color: #049CDB; }
+	.secondaryColor { color: #f5f5f5; }
+	.secondaryColorBackground { background-color: #f5f5f5; }
+	.linkColor { color: #0088cc; }
+	.linkColorBackground { background-color: #0088cc; }
+	.linkColorHover { color: #005580; }
+	.linkColorHoverBackground { background-color: #005580; }
+	.highlightColor { background-color:#FFFF00; }
+
+	/* Message Colors */
+	.successText { color: #468847; }
+	.successBackground { background-color: #dff0d8; } 
+	.warningText { color: #c09853; }
+	.warningBackground { background-color: #f3edd2; }
+	.errorText { color: #b94a48; }
+	.errorBackground { background-color: #f2dede; }
+
+/*	--------------------------------------------------
+	Interaction Styles
+	-------------------------------------------------- */
+	div .prompt { display: block; width: 100% }
+
+	.int-choice-list { width: 100%; padding: 0; margin: 8px 0; list-style: none; }
+	body.ie .int-choice-list { margin: 8px 0 0 -18px;  }
+	.int-choice-list > li { display: table; width: 100%; margin: 4px 0 4px; }	
+	.int-choice-control { padding: 2px 0 0; display: table-cell; vertical-align: top; /* font-weight: normal; line-height: normal; */ width: 8px; }
+	body.ie .radio .int-choice-control { padding: 0 0 0 18px; }
+	body.ie .int-choice-control .checkbox { padding: 0 10px 0 18px; }
+	.int-choice-label { padding: 5px 4px 4px; display: table-cell; vertical-align: top; /* font-weight: normal; line-height: normal; */ width: 18px; }
+	.int-choice-desc { padding: 5px 4px 4px; display: table-cell; vertical-align: top; /* font-weight: normal; line-height: normal; */ }
+	.int-choice-list.two-up > li { display:inline-block; width: 46%; margin-right: 4px; vertical-align: top; }
+	.int-choice-list.three-up > li { display:inline-block; width: 31%; margin-right: 4px; vertical-align: top; }
+	.int-choice-list.four-up > li { display:inline-block; width: 20.5%; margin-right: 4px; vertical-align: top; }
+	.int-choice-list.five-up > li { display:inline-block; width: 16%; margin-right: 4px; vertical-align: top; }
+	.int-choice-desc.valign-baseline { vertical-align: baseline; }
+	.int-choice-desc.valign-baseline span { display:inline-block; vertical-align: baseline; }
+	.int-choice-desc.valign-middle { vertical-align: middle; }
+	.int-choice-desc.valign-middle span { display:inline-block; vertical-align: middle; }
+	.int-choice-desc.valign-top { vertical-align: top; }
+	.int-choice-desc.valign-top span { display:inline-block; vertical-align: top; }
+	/* override choices with MathJax */
+	.int-choice-desc.valign-top .MathJax span, .int-choice-desc.valign-middle .MathJax span { vertical-align:baseline }
+	
+	/* Used in choice interaction. Needed for answer masking to work. */
+	label.radio, label.checkbox { display:inline-block;line-height:normal; }
+	
+	div .img-label { display: inline; position: relative; top: -14px; left: 10px; }
+	div .img-desc { display: inline; position: relative; top: -19px; left: 10px; }
+	body.ie8 div .img-label, body.ie9 div .img-label, body.ie10 div .img-label, body.ie11 div .img-label { display: table-cell; top: -2px; left: 8px; }
+	body.ie8 div .img-desc, body.ie9 div .img-desc, body.ie10 div .img-desc, body.ie11 div .img-desc { display: table-cell; top: -7px; }
+	.valign-img-large.img-label { top: -15px; }
+	.valign-img-large.img-desc { top: -23px; }
+	body.ie8 .valign-img-large.img-label, body.ie9 .valign-img-large.img-label, body.ie10 .valign-img-large.img-label, body.ie11 .valign-img-large.img-label { top: -3px; }
+	body.ie8 .valign-img-large.img-desc, body.ie9 .valign-img-large.img-desc, body.ie10 .valign-img-large.img-desc, body.ie11 .valign-img-large.img-desc { top: -11px; padding-left: 5px; }
+
+	input[type="text"] { padding-top:3px;padding-bottom:3px;margin-bottom:0;margin-top:-2;vertical-align:baseline; }
+	.int-extended-text { display: block; margin: 8px 0; width: 95%; max-width: 95%; height: 54px; line-height: 18px; font-weight: normal; }
+	.int-extended-text-counter { display:inline-block;padding:2px 4px;margin-top:-6px;font-size:14px;line-height:20px;cursor:not-allowed;vertical-align:middle; }
+	.height-medium { height: 108px; }
+	.height-tall { height: 162px; }
+	.height-xtratall { height: 216px; }
+	
+	/* make blockquotes a little bigger, this helps improve the presentation of inline interactions */
+	blockquote p { line-height:28px; }
+	blockquote p, blockquote p input[type="text"], blockquote p select { /* display: inline-block; */ *display: inline; *zoom: 1; margin-bottom: 0; }
+	
+/*	--------------------------------------------------
+	Convenient Table and Div styles
+	-------------------------------------------------- */	
+
+	.gradient { background-color: #eeeeee; background-image: url("../../public/images/global/gradient90.gif"); background-repeat: repeat-x; }
+	th.gradient { background-image: url("../../public/images/global/gradient24.gif"); border-bottom: 1px solid #cccccc; color: #444444; padding: 4px; }
+	td.gradient { background-image: url("../../public/images/global/gradient32.gif"); border: 1px solid #cccccc; /* color: #444444; */ }
+	
+	.boxText { border: 1px solid #cccccc; padding:8px; }
+	.whitebg { background-color: white; }
+	.bordered { border: 1px solid #cccccc; }
+	.bordered-dark { border: 1px solid #888888; }
+	.bb { border-bottom: 1px solid #cccccc; }
+	.bb-boot { border-bottom: 1px solid #dddddd; }
+	.bbd { border-bottom: 1px dashed #cccccc; }
+	.bbb { border-bottom: 1px solid #000000; }
+	.header-cell { vertical-align:middle; text-align:center; border:1px solid #cccccc; padding:4px;}
+	.round4 { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+	.fullWidth { width: 100%; }
+	.floatLeft { float: left; }
+	.floatRight { float: right; }
+	.underline { text-decoration: underline; }
+	.bold { font-weight: bold; }
+	.left { text-align: left; }
+	.right { text-align: right; }
+	.top { vertical-align: top; }
+	.middle { vertical-align: middle; }
+	.bottom { vertical-align: bottom; }
+	.baseline, input.baseline, select.baseline { vertical-align: baseline; }
+	div.center, p.center, td.center, th.center { text-align: center; }
+	.margin0 { margin:0; }
+	.margin0auto { margin:0 auto; }
+	.margin8 { margin: 8px; }
+	.pad0 { padding: 0; }
+	.pad2 { padding: 2px; }
+	.pad04 { padding: 4px 0 4px 0; }
+	.pad4 { padding: 4px; }
+	.pad6 th, .pad6 td { padding: 6px; }
+	.pad8 { padding: 8px; }
+	.pad8-24 { padding: 8px 24px; }
+	.table30 { width: 30%; margin-left: auto; margin-right:auto; }
+	.table40 { width: 40%; margin-left: auto; margin-right:auto; }
+	.table50 { width: 50%; margin-left: auto; margin-right:auto; }
+	.table75 { width: 75%; margin-left: auto; margin-right:auto; }
+	.tablecell { display:table-cell; }
+
+/*	--------------------------------------------------------------------
+	The following styles are extra styles used for specialized 
+	item content formatting.
+	-------------------------------------------------------------------- */
+
+	.indent-1 { margin-left: 25px; }
+	.indent-2 { margin-left: 50px; }
+	.text-indent25 { text-indent: 25px; }
+	.text-indent50 { text-indent: 50px; }
+	.math { font-family: "Times New Roman"; font-size: 16px; }
+	span.nobreak { white-space: nowrap; }
+	span.glossary-term {cursor:help;border-bottom:1px dotted #000000;}
