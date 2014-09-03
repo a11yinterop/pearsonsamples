@@ -2,7 +2,7 @@ body {
 	background: #E9E9E9 url("../../public/images/global/body-bg.png") repeat 0 0;
 	padding-top: 10px;
 }
-body#appTestnavItemPage, body#appEpenItemShowPage { padding-top:8px; }
+body#appTestnavItemPage { padding-top:8px; }
 
 .btn.hidden { display: none; }
 
@@ -174,10 +174,6 @@ body.ie div.itemCanvas .span6 {
 
 .itemCanvas-body {
   position: relative;
-  /* 
-   * Old padding used when there was an itemCanvas-header
-  padding: 8px 20px;
-   */
   padding: 16px 20px 8px;
 }
 
