@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html unselectable="on">
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Pearson ::: Accessibility Samples</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="language" content="en"/>
+<meta name="google" content="notranslate" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+<link rel="shortcut icon" href="public/images/favicon.png" />
+<link rel="stylesheet" type="text/css" href="public/stylesheets/bootstrap-2.3.css"/>
+<link rel="stylesheet" type="text/css" href="public/stylesheets/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="public/stylesheets/jquery-ui-1.8.23.custom.css"/>
+<link rel="stylesheet" type="text/css" href="public/stylesheets/tn.css"/>
+<link rel="stylesheet" type="text/css" href="public/stylesheets/item.css"/>
+<link rel="stylesheet" type="text/css" href="public/stylesheets/acc.css"/>
+<link rel="stylesheet" type="text/css" href="public/stylesheets/bootstrap-responsive-2.3.css"/>
+</head>
+<body class="" unselectable="on">
+
+	<div id="main_panel">
+		<div class="container">
+
+			<div id="itemCanvas" class="itemCanvas" role="main">
+				<h1 id="itemCanvasTitle" class="visuallyhidden">Example: Inline Choice Interaction - Not Working</h1>
+				<div id="itemCanvasBody" class="itemCanvas-body parcc">
+
+					<div class="row">
+						<div class="span6">
+
+							<h2 class="semantic-marker visuallyhidden">Question</h2>
+
+							<p>Identify the missing word in this famous quote from Shakespeare's Richard III.</p>
+							<blockquote>
+								<p>Now is the winter of our discontent<br/> Made glorious summer by this sun of
+
+									<span aria-hidden="true"><select id="interaction_RESPONSE" class="at-enable baseline input-medium" data-module="InlineChoice" data-identifier="RESPONSE" >
+										<option value="">Choose...</option>
+										<option value="G">Gloucester</option>
+										<option value="L">Lancaster</option>
+										<option value="Y">York</option>
+									</select></span><!-- shadow interaction for: RESPONSE --><span class="visuallyhidden" data-module="InlineChoice" aria-label="multiple choice radio button group with 3 options" role="radiogroup" data-identifier="RESPONSE_shadow">	<span>
+											<input type="radio" id="choice_7dece_shadow" name="group_RESPONSE_shadow" value="G" />
+											<label for="choice_7dece_shadow">
+												<span>
+													Gloucester
+												</span>
+											</label>	</span>	<span>
+											<input type="radio" id="choice_c1922_shadow" name="group_RESPONSE_shadow" value="L" />
+											<label for="choice_c1922_shadow">
+												<span>
+													Lancaster
+												</span>
+											</label>	</span>	<span>
+											<input type="radio" id="choice_c051a_shadow" name="group_RESPONSE_shadow" value="Y" />
+											<label for="choice_c051a_shadow">
+												<span>
+													York
+												</span>
+											</label>	</span></span><!-- /shadow interaction for: RESPONSE -->
+									;<br/> And all the clouds that lour'd upon our house<br/>
+													In the deep bosom of the ocean buried.</p>
+							</blockquote>
+
+						</div>
+						<div class="span6">
+
+							<h2 class="semantic-marker visuallyhidden">Markup Strategy</h2>
+
+							<div class="well">
+								<p>
+									This interaction <strong>isn't working</strong>.  The proposed markup strategy is to aria-hide the select
+									box, and build a visually hidden shadow dom that is similar to the other multiple choice, single cardinality, markup presented
+									here in other examples.
+								</p>
+
+								<p>
+									However, there is a big problem with this strategy because the &lt;ul&gt; --> &lt;li&gt; shadow dom elements are <em>block</em> elements.
+									Consequently, they are illegal markup inside inline elements such as paragraph tags.
+								</p>
+
+								<p>
+									This example attempts to work around this by using span tags to replace the ul and li tags.  AT seems
+									to be very dependent of the list structure, and this span tag replacement strategy does not yield a
+									good result.
+								</p>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="itemCanvas-footer"></div>
+			</div>
+
+		</div> <!-- /container -->
+	</div> <!-- /main_panel -->
+
+
+<script type="text/javascript" src="public/javascripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="public/javascripts/bootstrap-2.3.js"></script>
+<script type="text/javascript" src="public/javascripts/jquery-ui-1.8.23.custom.min.js"></script>
+<script type="text/javascript" src="public/javascripts/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="public/javascripts/jquery.tabbable.js"></script>
+<script type="text/javascript" src="public/javascripts/mathjax-2.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function() {
+
+});
+// ]]>
+</script>
+</body>
+</html>
