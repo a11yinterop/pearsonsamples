@@ -17,6 +17,10 @@
 <link rel="stylesheet" type="text/css" href="public/stylesheets/item.css"/>
 <link rel="stylesheet" type="text/css" href="public/stylesheets/acc.css"/>
 <link rel="stylesheet" type="text/css" href="public/stylesheets/bootstrap-responsive-2.3.css"/>
+<style>
+#itemCanvasBody .glow-on {-webkit-transition: all 0.30s ease-in-out;-moz-transition: all 0.30s ease-in-out;-ms-transition: all 0.30s ease-in-out;-o-transition: all 0.30s ease-in-out;outline: none;border:1px dashed #666;}
+[data-module="ChoiceInteraction"] label{border:1px dashed transparent;box-sizing:border-box;}
+</style>
 </head>
 <body class="" unselectable="on">
 
@@ -105,9 +109,9 @@
 
 					<!-- shadow interaction for: RESPONSE -->
 					<div class="visuallyhidden">
-						<ul class="int-choice-list" data-module="ChoiceInteraction" aria-label="multiple choice radio button group with 6 options" role="radiogroup" data-identifier="RESPONSE_shadow">
+						<ul class="int-choice-list" aria-label="multiple choice radio button group with 3 options" role="radiogroup" data-identifier="RESPONSE_shadow">
 							<li>
-								<input type="radio" id="choice_5204e_shadow" name="group_RESPONSE_shadow" value="A" />
+								<input type="checkbox" id="choice_5204e_shadow" name="group_RESPONSE_shadow" value="A" />
 								<label for="choice_5204e_shadow">
 									<span>A.</span>
 									<span>
@@ -128,7 +132,7 @@
 								</label>
 							</li>
 							<li>
-								<input type="radio" id="choice_2a4b0_shadow" name="group_RESPONSE-2_shadow" value="B" />
+								<input type="checkbox" id="choice_2a4b0_shadow" name="group_RESPONSE_shadow" value="B" />
 								<label for="choice_2a4b0_shadow">
 									<span>B.</span>
 									<span>
@@ -149,7 +153,7 @@
 								</label>
 							</li>
 							<li>
-								<input type="radio" id="choice_e981d_shadow" name="group_RESPONSE-2_shadow" value="C" />
+								<input type="checkbox" id="choice_e981d_shadow" name="group_RESPONSE_shadow" value="C" />
 								<label for="choice_e981d_shadow">
 									<span>C.</span>
 									<span>
@@ -187,12 +191,13 @@
 <script type="text/javascript" src="public/javascripts/jquery.ui.touch-punch.min.js"></script>
 <script type="text/javascript" src="public/javascripts/jquery.tabbable.js"></script>
 <script type="text/javascript" src="public/javascripts/mathjax-2.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="public/javascripts/jquery.widget.choicemultiple.js"></script>
 <script type="text/javascript">
-// <![CDATA[
 $(document).ready(function() {
-
+	var el = $("ul[data-module='ChoiceInteraction']").choiceMultiple({
+		identifier: "RESPONSE"
+	});
 });
-// ]]>
 </script>
 </body>
 </html>

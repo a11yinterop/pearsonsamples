@@ -17,6 +17,10 @@
 <link rel="stylesheet" type="text/css" href="public/stylesheets/item.css"/>
 <link rel="stylesheet" type="text/css" href="public/stylesheets/acc.css"/>
 <link rel="stylesheet" type="text/css" href="public/stylesheets/bootstrap-responsive-2.3.css"/>
+<style>
+#itemCanvasBody .glow-on {-webkit-transition: all 0.30s ease-in-out;-moz-transition: all 0.30s ease-in-out;-ms-transition: all 0.30s ease-in-out;-o-transition: all 0.30s ease-in-out;outline: none;border:1px dashed #666;}
+[data-module="ChoiceInteraction"] label{border:1px dashed transparent;box-sizing:border-box;}
+</style>
 </head>
 <body class="" unselectable="on">
 
@@ -29,218 +33,195 @@
 
 					<h2 class="semantic-marker visuallyhidden">Stimulus</h2>
 
-					<img src="public/assets/apip_VC_IP_02.svg" id="figure1" width="250" height="165" alt="Rectangular Grid ABCD"/>
-					<span id="labelA">A</span>
-					<span id="labelB">B</span>
-					<span id="labelC">C</span>
-					<span id="labelD">D</span>
+					<p class="visuallyhidden" id="short-alt-text">Rectangular Grid ABCD</p>
+					<table class="visuallyhidden" id="long-description" role="grid">
+						<tbody>
+							<tr>
+								<td aria-readonly="true" role="gridcell">shaded</td>
+								<td aria-readonly="true" role="gridcell">shaded</td>
+								<td aria-readonly="true" role="gridcell">blank</td>
+								<td aria-readonly="true" role="gridcell">blank</td>
+							</tr>
+							<tr>
+								<td aria-readonly="true" role="gridcell">shaded</td>
+								<td aria-readonly="true" role="gridcell">shaded</td>
+								<td aria-readonly="true" role="gridcell">blank</td>
+								<td aria-readonly="true" role="gridcell">blank</td>
+							</tr>
+							<tr>
+								<td aria-readonly="true" role="gridcell">blank</td>
+								<td aria-readonly="true" role="gridcell">blank</td>
+								<td aria-readonly="true" role="gridcell">blank</td>
+								<td aria-readonly="true" role="gridcell">blank</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div aria-hidden="true">
+						  <img src="public/assets/apip_VC_IP_02.svg" id="figure1" alt="Rectangular Grid ABCD" width="250" height="165"/>
+						  <span id="labelA">A</span>
+						  <span id="labelB">B</span>
+						  <span id="labelC">C</span>
+						  <span id="labelD">D</span>
+					</div>
 
 					<h2 class="semantic-marker visuallyhidden">Question</h2>
 
-					<div id="prompt" class="prompt">
-						In the figure above, what fraction of the rectangle <em>ABCD</em> is
-                		shaded?
-                	</div>
+					<div id="prompt" class="prompt">In the figure above, what fraction of the rectangle <em>ABCD</em> is shaded?</div>
 
 					<div aria-hidden="true">
-						<ul class="int-choice-list at-enabled" data-module="ChoiceInteraction" data-identifier="interaction_RESPONSE">
-						<li>
-							<label class="radio" for="choice_1a84a">
-								<div class="int-choice-control">
-									<input type="radio" id="choice_1a84a" name="group_RESPONSE" value="A" />
-								</div>
-								<div class="int-choice-label">
-									A.
-								</div>
-								<div  class="int-choice-desc ">
-										<p id="p2">
-											<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="fraction one third" id="r1">
-												<mfrac>
-													<mn>1</mn>
-													<mn>3</mn>
-												</mfrac>
-											</math>
-										</p>
-									</div>
-							</label>
-						</li>
-						<li>
-							<label class="radio" for="choice_0b4d1">
-								<div class="int-choice-control">
-									<input type="radio" id="choice_0b4d1" name="group_RESPONSE" value="B" />
-								</div>
-								<div class="int-choice-label">
-									B.
-								</div>
-								<div  class="int-choice-desc ">
-										<p id="p3">
-											<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="fraction one fifth" id="r2">
-												<mfrac>
-													<mn>1</mn>
-													<mn>5</mn>
-												</mfrac>
-											</math>
-										</p>
-									</div>
-							</label>
-						</li>
-						<li>
-							<label class="radio" for="choice_7613c">
-								<div class="int-choice-control">
-									<input type="radio" id="choice_7613c" name="group_RESPONSE" value="C" />
-								</div>
-								<div class="int-choice-label">
-									C.
-								</div>
-								<div  class="int-choice-desc ">
-										<p id="p4">
-											<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="fraction one fourth" id="r3">
-												<mfrac>
-													<mn>1</mn>
-													<mn>4</mn>
-												</mfrac>
-											</math>
-										</p>
-									</div>
-							</label>
-						</li>
-						<li>
-							<label class="radio" for="choice_2dadb">
-								<div class="int-choice-control">
-									<input type="radio" id="choice_2dadb" name="group_RESPONSE" value="D" />
-								</div>
-								<div class="int-choice-label">
-									D.
-								</div>
-								<div  class="int-choice-desc ">
-										<p id="p5">
-											<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="fraction one third" id="r4">
-												<mfrac>
-													<mn>1</mn>
-													<mn>3</mn>
-												</mfrac>
-											</math>
-										</p>
-									</div>
-							</label>
-						</li>
-						<li>
-							<label class="radio" for="choice_a671d">
-								<div class="int-choice-control">
-									<input type="radio" id="choice_a671d" name="group_RESPONSE" value="E" />
-								</div>
-								<div class="int-choice-label">
-									E.
-								</div>
-								<div  class="int-choice-desc ">
-										<p id="p6">
-											<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="fraction one half" id="r5">
-												<mfrac>
-													<mn>1</mn>
-													<mn>2</mn>
-												</mfrac>
-											</math>
-										</p>
-									</div>
-							</label>
-						</li>
-						</ul>
+					<ul class="int-choice-list at-enable" data-module="ChoiceInteraction" data-identifier="RESPONSE">
+					<li>
+						<label class="radio" for="choice_9c998">
+							<div class="int-choice-control">
+								<input type="radio" id="choice_9c998" name="group_RESPONSE" value="A" />
+							</div>
+							<div class="int-choice-label">
+								A.
+							</div>
+							<div  class="int-choice-desc ">
+								<p>
+								  <math xmlns="http://www.w3.org/1998/Math/MathML" alttext="fraction one fifth" id="r2">
+									<mfrac>
+									  <mn>1</mn>
+									  <mn>5</mn>
+									</mfrac>
+								  </math>
+								</p>
+						  </div>
+						</label>
+					</li>
+					<li>
+						<label class="radio" for="choice_9afe1">
+							<div class="int-choice-control">
+								<input type="radio" id="choice_9afe1" name="group_RESPONSE" value="B" />
+							</div>
+							<div class="int-choice-label">
+								B.
+							</div>
+							<div  class="int-choice-desc ">
+								<p>
+								  <math xmlns="http://www.w3.org/1998/Math/MathML" alttext="fraction one fourth" id="r3">
+									<mfrac>
+									  <mn>1</mn>
+									  <mn>4</mn>
+									</mfrac>
+								  </math>
+								</p>
+						  </div>
+						</label>
+					</li>
+					<li>
+						<label class="radio" for="choice_f0b46">
+							<div class="int-choice-control">
+								<input type="radio" id="choice_f0b46" name="group_RESPONSE" value="C" />
+							</div>
+							<div class="int-choice-label">
+								C.
+							</div>
+							<div  class="int-choice-desc ">
+								<p>
+								  <math xmlns="http://www.w3.org/1998/Math/MathML" alttext="fraction one third" id="r4">
+									<mfrac>
+									  <mn>1</mn>
+									  <mn>3</mn>
+									</mfrac>
+								  </math>
+								</p>
+						  </div>
+						</label>
+					</li>
+					<li>
+						<label class="radio" for="choice_a9a1d">
+							<div class="int-choice-control">
+								<input type="radio" id="choice_a9a1d" name="group_RESPONSE" value="D" />
+							</div>
+							<div class="int-choice-label">
+								D.
+							</div>
+							<div  class="int-choice-desc ">
+								<p>
+								  <math xmlns="http://www.w3.org/1998/Math/MathML" alttext="fraction one half" id="r5">
+									<mfrac>
+									  <mn>1</mn>
+									  <mn>2</mn>
+									</mfrac>
+								  </math>
+								</p>
+						  </div>
+						</label>
+					</li>
+					</ul>
 					</div>
 
 					<!-- shadow interaction for: RESPONSE -->
 					<div class="visuallyhidden">
-						<ul class="int-choice-list" data-module="ChoiceInteraction" aria-label="multiple choice radio button group with 5 options" role="radiogroup" data-identifier="interaction_RESPONSE_shadow">
-							<li>
-								<input type="radio" id="choice_1a84a_shadow" name="group_RESPONSE_shadow" value="A" />
-								<label for="choice_1a84a_shadow">
-									<span>A.</span>
-									<span>
-
-										<p id="p2">
-											<math xmlns="http://www.w3.org/1998/Math/MathML" class="mml2jax_ignore" role="math" aria-label="fraction one third"  alttext="fraction one third" id="r1">
-												<mfrac>
-													<mn>1</mn>
-													<mn>3</mn>
-												</mfrac>
-											</math>
-										</p>
-
-									</span>
-								</label>
-							</li>
-							<li>
-								<input type="radio" id="choice_0b4d1_shadow" name="group_RESPONSE_shadow" value="B" />
-								<label for="choice_0b4d1_shadow">
-									<span>B.</span>
-									<span>
-
-										<p id="p3">
-											<math xmlns="http://www.w3.org/1998/Math/MathML" class="mml2jax_ignore" role="math" aria-label="fraction one fifth"  alttext="fraction one fifth" id="r2">
-												<mfrac>
-													<mn>1</mn>
-													<mn>5</mn>
-												</mfrac>
-											</math>
-										</p>
-
-									</span>
-								</label>
-							</li>
-							<li>
-								<input type="radio" id="choice_7613c_shadow" name="group_RESPONSE_shadow" value="C" />
-								<label for="choice_7613c_shadow">
-									<span>C.</span>
-									<span>
-
-										<p id="p4">
-											<math xmlns="http://www.w3.org/1998/Math/MathML" class="mml2jax_ignore" role="math" aria-label="fraction one fourth"  alttext="fraction one fourth" id="r3">
-												<mfrac>
-													<mn>1</mn>
-													<mn>4</mn>
-												</mfrac>
-											</math>
-										</p>
-
-									</span>
-								</label>
-							</li>
-							<li>
-								<input type="radio" id="choice_2dadb_shadow" name="group_RESPONSE_shadow" value="D" />
-								<label for="choice_2dadb_shadow">
-									<span>D.</span>
-									<span>
-
-										<p id="p5">
-											<math xmlns="http://www.w3.org/1998/Math/MathML" class="mml2jax_ignore" role="math" aria-label="fraction one third"  alttext="fraction one third" id="r4">
-												<mfrac>
-													<mn>1</mn>
-													<mn>3</mn>
-												</mfrac>
-											</math>
-										</p>
-
-									</span>
-								</label>
-							</li>
-							<li>
-								<input type="radio" id="choice_a671d_shadow" name="group_RESPONSE_shadow" value="E" />
-								<label for="choice_a671d_shadow">
-									<span>E.</span>
-									<span>
-
-										<p id="p6">
-											<math xmlns="http://www.w3.org/1998/Math/MathML" class="mml2jax_ignore" role="math" aria-label="fraction one half"  alttext="fraction one half" id="r5">
-												<mfrac>
-													<mn>1</mn>
-													<mn>2</mn>
-												</mfrac>
-											</math>
-										</p>
-
-									</span>
-								</label>
-							</li>
-						</ul>
+					<ul class="int-choice-list" aria-label="multiple choice radio button group with 4 options" role="radiogroup" data-identifier="RESPONSE_shadow">
+						<li>
+							<input type="checkbox" id="choice_9c998_shadow" name="group_RESPONSE_shadow" value="A" />
+							<label for="choice_9c998_shadow">
+								<span>A.</span>
+								<span>
+									<p>
+									  <math xmlns="http://www.w3.org/1998/Math/MathML" class="mml2jax_ignore" role="math" aria-label="fraction one fifth"  alttext="fraction one fifth" id="r2">
+										<mfrac>
+										  <mn>1</mn>
+										  <mn>5</mn>
+										</mfrac>
+									  </math>
+									</p>
+								</span>
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" id="choice_9afe1_shadow" name="group_RESPONSE_shadow" value="B" />
+							<label for="choice_9afe1_shadow">
+								<span>B.</span>
+								<span>
+									<p>
+									  <math xmlns="http://www.w3.org/1998/Math/MathML" class="mml2jax_ignore" role="math" aria-label="fraction one fourth"  alttext="fraction one fourth" id="r3">
+										<mfrac>
+										  <mn>1</mn>
+										  <mn>4</mn>
+										</mfrac>
+									  </math>
+									</p>
+								</span>
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" id="choice_f0b46_shadow" name="group_RESPONSE_shadow" value="C" />
+							<label for="choice_f0b46_shadow">
+								<span>C.</span>
+								<span>
+									<p>
+									  <math xmlns="http://www.w3.org/1998/Math/MathML" class="mml2jax_ignore" role="math" aria-label="fraction one third"  alttext="fraction one third" id="r4">
+										<mfrac>
+										  <mn>1</mn>
+										  <mn>3</mn>
+										</mfrac>
+									  </math>
+									</p>
+								</span>
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" id="choice_a9a1d_shadow" name="group_RESPONSE_shadow" value="D" />
+							<label for="choice_a9a1d_shadow">
+								<span>D.</span>
+								<span>
+									<p>
+									  <math xmlns="http://www.w3.org/1998/Math/MathML" class="mml2jax_ignore" role="math" aria-label="fraction one half"  alttext="fraction one half" id="r5">
+										<mfrac>
+										  <mn>1</mn>
+										  <mn>2</mn>
+										</mfrac>
+									  </math>
+									</p>
+								</span>
+							</label>
+						</li>
+					</ul>
 					</div>
 					<!-- /shadow interaction for: RESPONSE -->
 
@@ -258,12 +239,13 @@
 <script type="text/javascript" src="public/javascripts/jquery.ui.touch-punch.min.js"></script>
 <script type="text/javascript" src="public/javascripts/jquery.tabbable.js"></script>
 <script type="text/javascript" src="public/javascripts/mathjax-2.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="public/javascripts/jquery.widget.choicemultiple.js"></script>
 <script type="text/javascript">
-// <![CDATA[
 $(document).ready(function() {
-
+	var el = $("ul[data-module='ChoiceInteraction']").choiceMultiple({
+		identifier: "RESPONSE"
+	});
 });
-// ]]>
 </script>
 </body>
 </html>
